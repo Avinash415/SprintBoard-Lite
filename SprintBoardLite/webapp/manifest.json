@@ -1,0 +1,103 @@
+{
+    "_version": "1.86.0",
+    "sap.app": {
+        "id": "SprintBoardLite",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap-ux/fiori-freestyle-writer:basic",
+            "version": "3.0.39"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.148.1",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "SprintBoardLite.i18n.i18n"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "viewPath": "SprintBoardLite.view",
+                "controlId": "app",
+                "controlAggregation": "pages",
+                "async": true
+            },
+            "routes": [
+                {
+                    "name": "Overview",
+                    "pattern": "",
+                    "target": [
+                        "Overview"
+                    ]
+                },
+                {
+                    "name": "Detail",
+                    "pattern": "task/{taskId}",
+                    "target": [
+                        "Detail"
+                    ]
+                }
+            ],
+            "targets": {
+                "Overview": {
+                    "viewName": "Overview"
+                },
+                "Detail": {
+                    "viewName": "Detail"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "SprintBoardLite.view.App",
+            "type": "XML",
+            "id": "app",
+            "async": true
+        }
+    }
+}

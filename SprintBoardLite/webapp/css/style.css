@@ -1,0 +1,1471 @@
+/* ==========================================================
+   OVERVIEW PAGE – Modern Responsive Design
+   ========================================================== */
+
+.overviewPage {
+    background: #f1f5f9;
+}
+
+/* ========== APP HEADER ========== */
+.appHeader {
+    background: linear-gradient(135deg, #0f2744 0%, #17375e 100%);
+    padding: 0.85rem 1.5rem;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(15, 39, 68, 0.25);
+}
+
+.headerLeft {
+    gap: 0.75rem;
+}
+
+.headerTitle {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    letter-spacing: -0.01em;
+}
+
+.headerBtn {
+    color: #ffffff !important;
+}
+
+.headerBtn .sapMBtnInner {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+}
+
+.userAvatar {
+    margin-left: 0.75rem;
+}
+
+/* ========== HERO ========== */
+.heroSection {
+    margin: 2rem 1.5rem 0.5rem;
+}
+
+.heroTitle {
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    color: #0f172a !important;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.35rem !important;
+}
+
+.heroSubtitle {
+    color: #64748b;
+    font-size: 1.05rem;
+}
+
+/* ========== ACTION BAR ========== */
+.actionBar {
+    margin: 0 1.5rem 1.25rem;
+}
+
+.newTaskBtn {
+    border-radius: 10px !important;
+    height: 2.75rem !important;
+    font-weight: 600 !important;
+    padding: 0 1.4rem !important;
+}
+
+/* ========== STATISTICS CARDS ========== */
+.statsRow {
+    margin: 0 1.5rem 1.75rem;
+    gap: 1.1rem;
+}
+
+.statCard {
+    flex: 1 1 220px;
+    min-width: 220px;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    overflow: hidden;
+}
+
+.statCardContent {
+    padding: 1.25rem 1.4rem;
+    gap: 1rem;
+}
+
+.statNumberBox {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statNumberBox.info   { background: #dbeafe; }
+.statNumberBox.warning { background: #fef3c7; }
+.statNumberBox.success { background: #dcfce7; }
+
+.statNumber {
+    font-size: 1.6rem !important;
+    font-weight: 800 !important;
+}
+
+.statLabel {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #334155;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.statSub {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 0.15rem;
+}
+
+/* ========== TASK CONTAINER ========== */
+.taskContainer {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    margin: 0 1.5rem 1.5rem !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    overflow: hidden;
+}
+
+.taskToolbar {
+    background: transparent !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    padding: 0.85rem 1.25rem !important;
+}
+
+.sectionTitle {
+    font-weight: 700 !important;
+    color: #0f172a !important;
+}
+
+.taskCountBadge {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    border-radius: 999px !important;
+    padding: 0.2rem 0.85rem !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+    margin-left: 0.75rem !important;
+}
+
+/* ========== FILTER SECTION ========== */
+.filterSection {
+    padding: 1rem 1.25rem 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.filterRow {
+    gap: 1rem;
+}
+
+.searchField {
+    max-width: 280px;
+    min-width: 200px;
+}
+
+.filterControls {
+    gap: 0.5rem;
+}
+
+.filterSelect {
+    min-width: 10.5rem;
+}
+
+.filterBtn {
+    min-width: 2.5rem !important;
+}
+
+/* ========== TABLE ========== */
+.taskTable {
+    border: none !important;
+}
+
+.taskTable .sapMListTblHeaderCell {
+    background: #f8fafc !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    padding: 0.85rem 1rem !important;
+}
+
+.taskTable .sapMColumnHeader {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em;
+}
+
+.taskTable .sapMLIB {
+    border-bottom: 1px solid #f1f5f9 !important;
+}
+
+.taskTable .sapMLIB:hover {
+    background: #f8fafc !important;
+}
+
+.taskTitleCell {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.dueDateCell {
+    font-variant-numeric: tabular-nums;
+}
+
+.priorityPill,
+.statusPill {
+    border-radius: 999px !important;
+    font-weight: 600 !important;
+    font-size: 0.8rem !important;
+}
+
+/* ========== TIP ========== */
+.tipBar {
+    margin: 0 1.5rem 2rem;
+    gap: 0.5rem;
+    color: #64748b;
+    font-size: 0.875rem;
+}
+
+.tipIcon {
+    color: #94a3b8;
+}
+
+/* ==========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================== */
+
+/* Tablet & below */
+@media screen and (max-width: 1024px) {
+    .statsRow {
+        gap: 0.9rem;
+    }
+
+    .statCard {
+        flex: 1 1 200px;
+    }
+}
+
+/* Small tablet / large phone */
+@media screen and (max-width: 768px) {
+    .appHeader {
+        padding: 0.75rem 1rem;
+    }
+
+    .heroSection {
+        margin: 1.5rem 1rem 0.25rem;
+    }
+
+    .heroTitle {
+        font-size: 1.85rem !important;
+    }
+
+    .actionBar {
+        margin: 0 1rem 1rem;
+    }
+
+    .statsRow {
+        margin: 0 1rem 1.25rem;
+        flex-direction: column;
+    }
+
+    .statCard {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .taskContainer {
+        margin: 0 1rem 1.25rem !important;
+    }
+
+    .filterRow {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .searchField {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .filterControls {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .filterSelect {
+        flex: 1 1 auto;
+        min-width: 0 !important;
+    }
+
+    .tipBar {
+        margin: 0 1rem 1.5rem;
+    }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+    .heroTitle {
+        font-size: 1.6rem !important;
+    }
+
+    .heroSubtitle {
+        font-size: 0.95rem;
+    }
+
+    .newTaskBtn {
+        width: 100%;
+    }
+
+    .actionBar {
+        justify-content: stretch !important;
+    }
+
+    .filterControls {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filterSelect,
+    .filterBtn {
+        width: 100% !important;
+    }
+
+    .filterBtn {
+        justify-content: center;
+    }
+
+    .taskToolbar {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .statCardContent {
+        padding: 1rem 1.15rem;
+    }
+}
+
+/* Very small phones */
+@media screen and (max-width: 360px) {
+    .appHeader {
+        padding: 0.65rem 0.75rem;
+    }
+
+    .headerTitle {
+        font-size: 1rem !important;
+    }
+
+    .heroSection {
+        margin: 1.25rem 0.75rem 0.25rem;
+    }
+
+    .statsRow,
+    .taskContainer,
+    .actionBar,
+    .tipBar {
+        margin-left: 0.75rem !important;
+        margin-right: 0.75rem !important;
+    }
+}
+
+
+/* ==========================================
+   MOBILE OVERVIEW - IMPROVED RESPONSIVE UI
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* Main task container */
+    .taskContainer {
+        margin: 0 0.75rem 1rem !important;
+        border-radius: 10px !important;
+        overflow: hidden;
+    }
+
+    /* Task toolbar */
+    .taskToolbar {
+        padding: 0.75rem 0.85rem !important;
+        min-height: 3.2rem;
+    }
+
+    .sectionTitle {
+        font-size: 1rem !important;
+    }
+
+    .taskCountBadge {
+        margin-left: 0.4rem !important;
+    }
+
+    /* Filter section */
+    .filterSection {
+        padding: 0.85rem !important;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* Search and controls wrapper */
+    .filterRow {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100%;
+        gap: 0.75rem !important;
+    }
+
+    /* Search bar */
+    .searchField {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+
+    .searchField .sapMSFF {
+        border-radius: 7px !important;
+    }
+
+    /* Sort / Filter / Refresh */
+    .filterControls {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        width: 100% !important;
+        gap: 0.5rem !important;
+    }
+
+    .filterSelect {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        width: auto !important;
+    }
+
+    .filterBtn {
+        flex: 0 0 2.65rem !important;
+        width: 2.65rem !important;
+        min-width: 2.65rem !important;
+        height: 2.5rem !important;
+    }
+
+    .filterBtn .sapMBtnInner {
+        min-width: 2.5rem !important;
+        height: 2.5rem !important;
+        border-radius: 8px !important;
+    }
+
+    /* Table */
+    .taskTable {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .taskTable .sapMListTblHeaderCell {
+        padding: 0.7rem 0.85rem !important;
+    }
+
+    .taskTable .sapMListTblCell {
+        padding: 0.6rem 0.85rem !important;
+        vertical-align: top !important;
+    }
+
+    .taskTitleCell {
+        font-size: 0.88rem !important;
+        font-weight: 700 !important;
+    }
+
+    .dueDateCell {
+        font-size: 0.8rem !important;
+    }
+
+    /* Task row spacing */
+    .taskTable .sapMLIB {
+        min-height: auto !important;
+    }
+
+    /* Footer tip */
+    .tipBar {
+        margin: 0 0.85rem 1rem !important;
+        font-size: 0.78rem;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE - 480px
+========================================== */
+
+@media screen and (max-width: 480px) {
+
+    .appHeader {
+        padding: 0.65rem 0.85rem;
+    }
+
+    .headerTitle {
+        font-size: 0.95rem !important;
+    }
+
+    .heroSection {
+        margin: 1.1rem 0.85rem 0.5rem;
+    }
+
+    .heroTitle {
+        font-size: 1.5rem !important;
+    }
+
+    .heroSubtitle {
+        font-size: 0.85rem !important;
+    }
+
+    .actionBar {
+        margin: 0 0.85rem 0.85rem;
+    }
+
+    .newTaskBtn {
+        width: 100% !important;
+    }
+
+    /* Compact statistics */
+    .statsRow {
+        margin: 0 0.85rem 1rem;
+        gap: 0.65rem;
+    }
+
+    .statCardContent {
+        padding: 0.85rem 1rem;
+    }
+
+    .statNumberBox {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .statNumber {
+        font-size: 1.3rem !important;
+    }
+
+    /* Task container */
+    .taskContainer {
+        margin: 0 0.65rem 1rem !important;
+        border-radius: 9px !important;
+    }
+
+    .taskToolbar {
+        padding: 0.7rem 0.75rem !important;
+    }
+
+    /* Filter area */
+    .filterSection {
+        padding: 0.75rem !important;
+    }
+
+    .filterRow {
+        gap: 0.65rem !important;
+    }
+
+    .filterControls {
+        gap: 0.4rem !important;
+    }
+
+    .filterBtn {
+        flex-basis: 2.5rem !important;
+        width: 2.5rem !important;
+        min-width: 2.5rem !important;
+    }
+
+    /* Table compact spacing */
+    .taskTable .sapMListTblHeaderCell {
+        padding: 0.65rem 0.75rem !important;
+    }
+
+    .taskTable .sapMListTblCell {
+        padding: 0.55rem 0.75rem !important;
+    }
+
+    .taskTable .sapMText {
+        font-size: 0.82rem;
+    }
+
+    .priorityPill,
+    .statusPill {
+        font-size: 0.75rem !important;
+    }
+
+    .tipBar {
+        margin: 0 0.85rem 1rem !important;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES - 360px
+========================================== */
+
+@media screen and (max-width: 360px) {
+
+    .taskContainer {
+        margin: 0 0.5rem 0.85rem !important;
+    }
+
+    .filterSection {
+        padding: 0.65rem !important;
+    }
+
+    .filterControls {
+        gap: 0.3rem !important;
+    }
+
+    .filterBtn {
+        flex-basis: 2.35rem !important;
+        width: 2.35rem !important;
+        min-width: 2.35rem !important;
+    }
+
+    .filterBtn .sapMBtnInner {
+        min-width: 2.35rem !important;
+    }
+
+    .heroTitle {
+        font-size: 1.35rem !important;
+    }
+
+    .statCardContent {
+        padding: 0.75rem;
+    }
+}
+
+
+
+
+/* ==========================================
+   TASK DIALOG - BASE DESIGN
+========================================== */
+
+.taskDialog {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+}
+
+.taskDialog .sapMDialogSection {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+}
+
+.taskDialog .sapMDialogTitle {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    padding: 1rem 1.4rem 0.7rem !important;
+}
+
+.taskDialog .sapMDialogScrollCont {
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   FORM CONTENT
+========================================== */
+
+.dialogContent {
+    padding: 0.6rem 1.4rem 1rem;
+    gap: 0.15rem;
+    box-sizing: border-box;
+}
+
+.dialogField {
+    min-width: 0;
+}
+
+.dialogLabel {
+    display: block;
+    color: #475569 !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3rem !important;
+}
+
+.dialogLabel.required::after {
+    content: " *";
+    color: #ef4444;
+}
+
+/* Inputs */
+
+.dialogInput {
+    margin-bottom: 0.85rem !important;
+}
+
+.dialogInput .sapMInputBaseContentWrapper {
+    border-radius: 7px !important;
+}
+
+.dialogTextArea {
+    margin-bottom: 0.65rem !important;
+}
+
+.dialogTextArea textarea {
+    min-height: 5rem !important;
+    border-radius: 7px !important;
+}
+
+/* Two column fields */
+
+.dialogRow {
+    gap: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+.dialogField.half {
+    width: calc(50% - 0.425rem);
+    min-width: 0;
+}
+
+/* ==========================================
+   PRIORITY
+========================================== */
+
+.priorityGroup {
+    margin-bottom: 0.9rem;
+}
+
+.priorityRadioGroup {
+    width: 100%;
+}
+
+.priorityRadioGroup .sapMRb {
+    margin-right: 0.65rem;
+}
+
+.priorityRadioGroup .sapMRbBLabel {
+    font-size: 0.85rem !important;
+}
+
+/* ==========================================
+   FAVORITE
+========================================== */
+
+.favoriteRow {
+    margin-top: 0.15rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.favoriteCheck .sapMCbLabel {
+    font-size: 0.85rem !important;
+    color: #334155 !important;
+}
+
+/* ==========================================
+   DIALOG FOOTER
+========================================== */
+
+.taskDialog .sapMDialogFooter {
+    background: #ffffff !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+.taskDialog .sapMDialogFooter .sapMBar {
+    padding: 0.4rem 0.85rem !important;
+    box-shadow: none !important;
+}
+
+.dialogPrimaryBtn {
+    min-width: 8rem !important;
+}
+
+.dialogPrimaryBtn .sapMBtnInner {
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+.dialogSecondaryBtn .sapMBtnInner {
+    border-radius: 8px !important;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+    .taskDialog {
+        max-width: calc(100vw - 32px) !important;
+    }
+
+    .dialogContent {
+        padding: 0.65rem 1.1rem 0.9rem;
+    }
+
+    .dialogField.half {
+        width: calc(50% - 0.425rem);
+        min-width: 0;
+    }
+}
+
+/* ==========================================
+   MOBILE - 600px
+========================================== */
+
+@media screen and (max-width: 600px) {
+
+    /* Dialog dimensions */
+
+    .taskDialog {
+        width: calc(100vw - 24px) !important;
+        max-width: calc(100vw - 24px) !important;
+        max-height: calc(100dvh - 24px) !important;
+        height: auto !important;
+        margin: 12px !important;
+        box-sizing: border-box;
+    }
+
+    .taskDialog .sapMDialogSection {
+        max-height: calc(100dvh - 24px) !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Header */
+
+    .taskDialog .sapMDialogTitle {
+        font-size: 1.1rem !important;
+        padding: 0.85rem 1rem 0.65rem !important;
+    }
+
+    /* Scrollable form */
+
+    .taskDialog .sapMDialogScroll {
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        flex: 1 1 auto !important;
+    }
+
+    .taskDialog .sapMDialogScrollCont {
+        max-height: calc(100dvh - 145px) !important;
+        overflow-y: auto !important;
+        padding: 0 !important;
+        height: auto !important;
+    }
+
+    /* Compact content */
+
+    .dialogContent {
+        padding: 0.45rem 1rem 0.75rem;
+        gap: 0;
+    }
+
+    /* Single column */
+
+    .dialogRow {
+        flex-direction: column !important;
+        gap: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .dialogField.half {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    /* Labels */
+
+    .dialogLabel {
+        font-size: 0.74rem !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    /* Input spacing */
+
+    .dialogInput {
+        margin-bottom: 0.7rem !important;
+    }
+
+    .dialogTextArea {
+        margin-bottom: 0.65rem !important;
+    }
+
+    .dialogTextArea textarea {
+        min-height: 4.5rem !important;
+    }
+
+    /* Priority */
+
+    .priorityGroup {
+        margin-bottom: 0.75rem;
+    }
+
+    .priorityRadioGroup {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0.4rem;
+    }
+
+    .priorityRadioGroup .sapMRb {
+        margin-right: 0.25rem !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* Favorite */
+
+    .favoriteRow {
+        margin-top: 0.1rem;
+        padding-top: 0.65rem;
+    }
+
+    /* Footer */
+
+    .taskDialog .sapMDialogFooter .sapMBar {
+        padding: 0.4rem 0.65rem !important;
+    }
+
+    .dialogPrimaryBtn {
+        min-width: 7rem !important;
+    }
+}
+
+/* ==========================================
+   EXTRA SMALL PHONES
+========================================== */
+
+@media screen and (max-width: 390px) {
+
+    .taskDialog {
+        width: calc(100vw - 16px) !important;
+        max-width: calc(100vw - 16px) !important;
+        margin: 8px !important;
+    }
+
+    .taskDialog .sapMDialogTitle {
+        font-size: 1.05rem !important;
+        padding: 0.75rem 0.9rem 0.55rem !important;
+    }
+
+    .dialogContent {
+        padding: 0.4rem 0.85rem 0.65rem;
+    }
+
+    .dialogInput {
+        margin-bottom: 0.6rem !important;
+    }
+
+    .priorityRadioGroup {
+        gap: 0.2rem;
+    }
+
+    .priorityRadioGroup .sapMRbBLabel {
+        font-size: 0.8rem !important;
+    }
+
+    .taskDialog .sapMDialogFooter .sapMBar {
+        padding: 0.35rem 0.5rem !important;
+    }
+}
+
+
+
+/* =====================================
+   PAGE
+===================================== */
+
+.detailPage,
+.detailPage .sapMPageEnableScrolling {
+    background: #f1f5f9 !important;
+}
+
+/* HEADER */
+
+.appHeader {
+    background: linear-gradient(135deg, #0f2744, #17375e);
+    padding: 0.65rem 1.5rem;
+    min-height: 3.2rem;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.headerLeft {
+    gap: 0.65rem;
+}
+
+.headerTitle {
+    color: #fff !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+}
+
+.headerBtn,
+.headerBtn .sapMBtnContent,
+.headerBtn .sapMBtnIcon {
+    color: #fff !important;
+}
+
+.headerBtn .sapMBtnInner {
+    background: transparent !important;
+    border: none !important;
+}
+
+.userAvatar {
+    margin-left: 0.7rem;
+}
+
+/* BREADCRUMB */
+
+.detailBreadcrumb {
+    padding: 1rem 1.5rem 0.4rem;
+    gap: 0.35rem;
+}
+
+.backBtn .sapMBtnInner {
+    border: none !important;
+}
+
+.breadcrumbLink {
+    color: #2563eb !important;
+    font-size: 0.85rem;
+}
+
+.breadcrumbSeparator,
+.breadcrumbCurrent {
+    color: #64748b !important;
+}
+
+/* HEADING */
+
+.detailHeading {
+    margin: 0.5rem 1.5rem 1.1rem;
+    gap: 1rem;
+}
+
+.headingContent {
+    gap: 0.4rem;
+    min-width: 0;
+}
+
+.detailTitle {
+    color: #17375e !important;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+}
+
+.statusRow {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.statusBadge,
+.priorityBadge {
+    border-radius: 999px !important;
+    padding: 0.2rem 0.65rem !important;
+    font-size: 0.75rem !important;
+}
+
+.statusBadge {
+    background: #e8f2ff;
+}
+
+.statusBadge .sapMObjStatusText {
+    color: #1684df !important;
+}
+
+.priorityBadge {
+    background: #fff0ce;
+}
+
+.priorityBadge .sapMObjStatusText {
+    color: #a16b00 !important;
+}
+
+.editButton .sapMBtnInner {
+    border-radius: 8px !important;
+    min-height: 2.5rem !important;
+    font-weight: 600 !important;
+}
+
+/* =====================================
+   MAIN TWO-COLUMN LAYOUT
+===================================== */
+
+.detailContent {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+
+    width: auto;
+    margin: 0 1.5rem;
+    gap: 1rem;
+    box-sizing: border-box;
+}
+
+/* CARDS */
+
+.infoPanel,
+.actionPanel {
+    background: #fff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 0.8rem 1rem;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+/* 2:1 width ratio */
+
+.infoPanel {
+    flex: 2 1 0% !important;
+}
+
+.actionPanel {
+    flex: 1 1 0% !important;
+}
+
+.panelTitle {
+    color: #243b59 !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    margin: 0 0 0.5rem !important;
+}
+
+/* INFORMATION */
+
+.infoContent {
+    padding: 0;
+}
+
+.infoRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 2.8rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.infoRow.lastRow {
+    border-bottom: none;
+}
+
+.infoLabel {
+    color: #718096 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    min-width: 100px;
+}
+
+.infoValue {
+    color: #334155 !important;
+    font-size: 0.85rem !important;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* QUICK ACTIONS */
+
+.actionContent {
+    gap: 0.55rem;
+}
+
+.actionBtn {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.actionBtn .sapMBtnInner {
+    height: 2.55rem !important;
+    border-radius: 8px !important;
+    justify-content: flex-start !important;
+    padding: 0 0.85rem !important;
+    font-weight: 600 !important;
+}
+
+/* GREEN */
+
+.successBtn .sapMBtnInner {
+    background: #e3f5ef !important;
+    border: 1px solid #e3f5ef !important;
+}
+
+.successBtn .sapMBtnContent,
+.successBtn .sapMBtnIcon {
+    color: #168b83 !important;
+}
+
+/* BLUE */
+
+.editDetailsBtn .sapMBtnInner {
+    background: #e8f2ff !important;
+    border: 1px solid #e8f2ff !important;
+}
+
+.editDetailsBtn .sapMBtnContent,
+.editDetailsBtn .sapMBtnIcon {
+    color: #1684df !important;
+}
+
+/* GREY */
+
+.backBtnAction .sapMBtnInner {
+    background: #edf2f7 !important;
+    border: 1px solid #edf2f7 !important;
+}
+
+.backBtnAction .sapMBtnContent,
+.backBtnAction .sapMBtnIcon {
+    color: #334155 !important;
+}
+
+/* TIP */
+
+.detailTip {
+    margin: 1rem 1.5rem 1.5rem;
+    gap: 0.45rem;
+}
+
+.detailTip .sapMText {
+    color: #718096 !important;
+    font-size: 0.75rem !important;
+}
+
+.tipIcon {
+    color: #94a3b8;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    .detailContent {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        margin: 0 1rem;
+    }
+
+    .infoPanel,
+    .actionPanel {
+        flex: none !important;
+        width: 100% !important;
+    }
+
+    .detailHeading {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .detailBreadcrumb {
+        padding-left: 1rem;
+    }
+
+    .detailTip {
+        margin-left: 1rem;
+    }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 480px) {
+
+    .appHeader {
+        padding: 0.6rem 0.85rem;
+    }
+
+    .detailHeading {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin: 0.5rem 0.85rem 1rem;
+    }
+
+    .detailTitle {
+        font-size: 1.3rem !important;
+    }
+
+    .editButton {
+        width: 100% !important;
+    }
+
+    .detailContent {
+        margin: 0 0.85rem;
+        gap: 0.85rem;
+    }
+
+    .infoRow {
+        gap: 0.5rem;
+    }
+
+    .detailTip {
+        margin: 1rem 0.85rem;
+    }
+}
+
+
+/* TASK INFORMATION CARD */
+
+.infoPanel {
+    flex: 2 1 0% !important;
+    min-width: 0;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 0.8rem 1rem;
+    box-sizing: border-box;
+}
+
+.actionPanel {
+    flex: 1 1 0% !important;
+    min-width: 0;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 9px;
+    padding: 0.8rem 1rem;
+    box-sizing: border-box;
+}
+
+.panelTitle {
+    color: #243b59 !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* INFORMATION ROWS */
+
+.infoContent {
+    width: 100%;
+}
+
+.infoRow {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0.7rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+    box-sizing: border-box;
+}
+
+.infoRow.lastRow {
+    border-bottom: none;
+}
+
+.infoLabel {
+    color: #718096 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+}
+
+.infoValue {
+    color: #334155 !important;
+    font-size: 0.85rem !important;
+    text-align: right;
+}
+
+/* DESCRIPTION */
+
+.descriptionSection {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    gap: 0.5rem;
+}
+
+.descriptionTitle {
+    color: #243b59 !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+}
+
+.descriptionText {
+    color: #64748b !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5rem !important;
+    overflow-wrap: anywhere;
+}
+
+/* QUICK ACTIONS */
+
+.actionContent {
+    gap: 0.65rem;
+}
+
+.actionBtn {
+    width: 100% !important;
+}
+
+.actionBtn .sapMBtnInner {
+    height: 2.55rem !important;
+    border-radius: 8px !important;
+    justify-content: flex-start !important;
+    padding: 0 0.85rem !important;
+    font-weight: 600 !important;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+
+    .detailContent {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .infoPanel,
+    .actionPanel {
+        flex: none !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .detailContent {
+        margin: 0 0.85rem;
+        gap: 0.85rem;
+    }
+
+    .infoPanel,
+    .actionPanel {
+        padding: 0.8rem;
+    }
+
+    .infoRow {
+        gap: 0.5rem;
+    }
+
+    .descriptionText {
+        font-size: 0.8rem !important;
+    }
+}
+
+
+/* DELETE TASK BUTTON */
+
+.deleteBtn .sapMBtnInner {
+    background: #fee2e2 !important;
+    border: 1px solid #fee2e2 !important;
+    border-radius: 8px !important;
+    height: 2.55rem !important;
+    justify-content: flex-start !important;
+    padding: 0 0.85rem !important;
+    font-weight: 600 !important;
+}
+
+.deleteBtn .sapMBtnContent,
+.deleteBtn .sapMBtnIcon {
+    color: #dc2626 !important;
+}
+
+.deleteBtn:hover .sapMBtnInner {
+    background: #fecaca !important;
+}
+

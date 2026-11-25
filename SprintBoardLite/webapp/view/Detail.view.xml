@@ -1,0 +1,286 @@
+<mvc:View
+    controllerName="SprintBoardLite.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+>
+    <Page
+        showHeader="false"
+        backgroundDesign="Solid"
+        class="detailPage"
+    >
+        <content>
+            <!-- APPLICATION HEADER -->
+            <HBox
+                class="appHeader"
+                justifyContent="SpaceBetween"
+                alignItems="Center"
+            >
+                <HBox
+                    alignItems="Center"
+                    class="headerLeft"
+                >
+                    <Avatar
+                        initials="S"
+                        backgroundColor="Accent6"
+                        displaySize="XS"
+                    />
+
+                    <Title
+                        text="SprintBoard Lite"
+                        level="H5"
+                        class="headerTitle"
+                    />
+                </HBox>
+
+                <HBox alignItems="Center">
+                    <Button
+                        text="Help"
+                        icon="sap-icon://sys-help"
+                        type="Transparent"
+                        class="headerBtn"
+                    />
+
+                    <Avatar
+                        initials="JD"
+                        displaySize="XS"
+                        class="userAvatar"
+                    />
+                </HBox>
+            </HBox>
+
+            <!-- BREADCRUMB -->
+            <HBox
+                class="detailBreadcrumb"
+                alignItems="Center"
+            >
+                <Button
+                    icon="sap-icon://nav-back"
+                    type="Transparent"
+                    press="onBack"
+                    class="backBtn"
+                />
+
+                <Link
+                    text="All tasks"
+                    press="onBack"
+                    class="breadcrumbLink"
+                />
+
+                <Text
+                    text="/"
+                    class="breadcrumbSeparator"
+                />
+
+                <Text
+                    text="{= 'Task ' + ${detail>/id} }"
+                    class="breadcrumbCurrent"
+                />
+            </HBox>
+
+            <!-- TASK HEADING -->
+            <HBox
+                class="detailHeading"
+                justifyContent="SpaceBetween"
+                alignItems="Center"
+                wrap="Wrap"
+            >
+                <VBox class="headingContent">
+                    <Title
+                        text="{detail>/title}"
+                        level="H2"
+                        class="detailTitle"
+                    />
+
+                    <HBox
+                        class="statusRow"
+                        alignItems="Center"
+                    >
+                        <ObjectStatus
+                            text="{detail>/status}"
+                            state="{= ${detail>/status} === 'Completed' || ${detail>/status} === 'Done' ? 'Success' : ${detail>/status} === 'In Progress' ? 'Information' : 'Warning' }"
+                            inverted="false"
+                            class="statusBadge"
+                        />
+
+                        <ObjectStatus
+                            text="{= ${detail>/priority} + ' priority' }"
+                            state="{= ${detail>/priority} === 'High' ? 'Error' : ${detail>/priority} === 'Medium' ? 'Warning' : 'Success' }"
+                            inverted="false"
+                            class="priorityBadge"
+                        />
+                    </HBox>
+                </VBox>
+
+                <Button
+                    text="Edit"
+                    icon="sap-icon://edit"
+                    type="Emphasized"
+                    press="onEdit"
+                    class="editButton"
+                />
+            </HBox>
+
+            <!-- MAIN CONTENT -->
+            <HBox
+                class="detailContent"
+                alignItems="Stretch"
+                justifyContent="Start"
+                wrap="NoWrap"
+            >
+                <!-- TASK INFORMATION -->
+                <VBox class="infoPanel">
+                    <Title
+                        text="Task information"
+                        level="H4"
+                        class="panelTitle"
+                    />
+
+                    <VBox class="infoContent">
+                        <HBox class="infoRow">
+                            <Text
+                                text="TASK ID"
+                                class="infoLabel"
+                            />
+                            <Text
+                                text="{detail>/id}"
+                                class="infoValue"
+                            />
+                        </HBox>
+
+                        <HBox class="infoRow">
+                            <Text
+                                text="CATEGORY"
+                                class="infoLabel"
+                            />
+                            <Text
+                                text="{detail>/category}"
+                                class="infoValue"
+                            />
+                        </HBox>
+
+                        <HBox class="infoRow">
+                            <Text
+                                text="DUE DATE"
+                                class="infoLabel"
+                            />
+                            <Text
+                                text="{path: 'detail>/dueDate', formatter: '.formatDate'}"
+                                class="infoValue"
+                            />
+                        </HBox>
+
+                        <HBox class="infoRow">
+                            <Text
+                                text="PRIORITY"
+                                class="infoLabel"
+                            />
+                            <Text
+                                text="{detail>/priority}"
+                                class="infoValue"
+                            />
+                        </HBox>
+
+                        <HBox class="infoRow">
+                            <Text
+                                text="STATUS"
+                                class="infoLabel"
+                            />
+                            <Text
+                                text="{detail>/status}"
+                                class="infoValue"
+                            />
+                        </HBox>
+
+                        <HBox class="infoRow lastRow">
+                            <Text
+                                text="FAVORITE"
+                                class="infoLabel"
+                            />
+                            <ObjectStatus
+                                text="{= ${detail>/favorite} ? 'Yes' : 'No' }"
+                                state="{= ${detail>/favorite} ? 'Success' : 'None' }"
+                            />
+                        </HBox>
+                    </VBox>
+
+                    <!-- DESCRIPTION -->
+                    <VBox class="descriptionSection">
+                        <Title
+                            text="Description"
+                            level="H5"
+                            class="descriptionTitle"
+                        />
+
+                        <Text
+                            text="{detail>/description}"
+                            wrapping="true"
+                            class="descriptionText"
+                        />
+                    </VBox>
+                </VBox>
+
+                <!-- QUICK ACTIONS -->
+                <VBox class="actionPanel">
+                    <Title
+                        text="Quick actions"
+                        level="H4"
+                        class="panelTitle"
+                    />
+
+                    <VBox class="actionContent">
+                        <Button
+                            text="Mark completed"
+                            icon="sap-icon://accept"
+                            width="100%"
+                            press="onMarkComplete"
+                            class="actionBtn successBtn"
+                        />
+
+                        <Button
+                            text="Edit details"
+                            icon="sap-icon://edit"
+                            width="100%"
+                            press="onEdit"
+                            class="actionBtn editDetailsBtn"
+                        />
+
+                        <!-- Delete Task -->
+                        <Button
+                            text="Delete task"
+                            icon="sap-icon://delete"
+                            width="100%"
+                            press="onDelete"
+                            class="actionBtn deleteBtn"
+                        />
+
+                        <Button
+                            text="Back to tasks"
+                            icon="sap-icon://nav-back"
+                            width="100%"
+                            press="onBack"
+                            class="actionBtn backBtnAction"
+                        />
+                    </VBox>
+                </VBox>
+            </HBox>
+
+            <!-- FOOTER TIP -->
+            <HBox
+                class="detailTip"
+                alignItems="Center"
+            >
+                <core:Icon
+                    src="sap-icon://hint"
+                    size="0.8rem"
+                    class="tipIcon"
+                />
+
+                <Text
+                    text="Tip: back navigation should also work using browser history."
+                />
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,13 @@
+{
+  "generator-ui5-project": {
+    "namespaceUI5": "com.avinash.sprintboard",
+    "projectName": "SprintBoardLite",
+    "uimoduleName": "SprintBoardLite",
+    "enableFPM": false,
+    "platform": "Static webserver",
+    "ui5Libs": "Content delivery network (OpenUI5)",
+    "newDir": true,
+    "initRepo": true,
+    "projectId": "com.avinash.sprintboard.SprintBoardLite"
+  }
+}

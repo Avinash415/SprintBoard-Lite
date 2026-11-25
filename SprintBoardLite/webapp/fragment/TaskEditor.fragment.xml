@@ -1,0 +1,129 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <Dialog
+        id="taskDialog"
+        contentWidth="32rem"
+        stretchOnPhone="true"
+        draggable="true"
+        resizable="false"
+        class="taskDialog"
+        title="{dialog>/dialogTitle}">
+
+        <content>
+            <VBox class="dialogContent">
+
+                <!-- Task Title -->
+                <Label
+                    text="Task Title"
+                    labelFor="titleInput"
+                    class="dialogLabel required"/>
+                <Input
+                    id="titleInput"
+                    value="{dialog>/title}"
+                    placeholder="e.g. Prepare sprint demo"
+                    required="true"
+                    class="dialogInput"/>
+
+                <!-- Category + Due Date -->
+                <HBox
+                    class="dialogRow"
+                    wrap="Wrap"
+                    justifyContent="SpaceBetween">
+
+                    <VBox class="dialogField half">
+                        <Label
+                            text="Category"
+                            labelFor="categoryInput"
+                            class="dialogLabel required"/>
+                        <Select
+                            id="categoryInput"
+                            selectedKey="{dialog>/category}"
+                            width="100%"
+                            class="dialogInput">
+                            <items>
+                                <core:Item key="Learning" text="Learning"/>
+                                <core:Item key="Planning" text="Planning"/>
+                                <core:Item key="Onboarding" text="Onboarding"/>
+                            </items>
+                        </Select>
+                    </VBox>
+
+                    <VBox class="dialogField half">
+                        <Label
+                            text="Due Date"
+                            labelFor="dueDateInput"
+                            class="dialogLabel required"/>
+                        <DatePicker
+                            id="dueDateInput"
+                            value="{dialog>/dueDate}"
+                            valueFormat="yyyy-MM-dd"
+                            displayFormat="dd MMM yyyy"
+                            width="100%"
+                            class="dialogInput"/>
+                    </VBox>
+                </HBox>
+
+                <!-- Priority -->
+                <Label
+                    text="Priority"
+                    class="dialogLabel required"/>
+                <HBox class="priorityGroup" justifyContent="SpaceBetween">
+                    <RadioButtonGroup
+                        id="priorityInput"
+                        columns="3"
+                        selectedIndex="{dialog>/priorityIndex}"
+                        class="priorityRadioGroup">
+                        <buttons>
+                            <RadioButton text="Low" class="priorityLow"/>
+                            <RadioButton text="Medium" class="priorityMedium"/>
+                            <RadioButton text="High" class="priorityHigh"/>
+                        </buttons>
+                    </RadioButtonGroup>
+                </HBox>
+
+                <!-- Description -->
+                <Label
+                    text="Description"
+                    labelFor="descriptionInput"
+                    class="dialogLabel"/>
+                <TextArea
+                    id="descriptionInput"
+                    value="{dialog>/description}"
+                    rows="4"
+                    maxLength="250"
+                    placeholder="What needs to be done? (optional)"
+                    width="100%"
+                    class="dialogInput dialogTextArea"/>
+
+                <!-- Favorite -->
+                <HBox class="favoriteRow" alignItems="Center">
+                    <CheckBox
+                        text="Mark as Favorite"
+                        selected="{dialog>/favorite}"
+                        class="favoriteCheck"/>
+                </HBox>
+
+            </VBox>
+        </content>
+
+        <beginButton>
+            <Button
+                text="Save Task"
+                icon="sap-icon://save"
+                type="Emphasized"
+                press="onSaveTask"
+                class="dialogPrimaryBtn"/>
+        </beginButton>
+
+        <endButton>
+            <Button
+                text="Cancel"
+                press="onCancelDialog"
+                class="dialogSecondaryBtn"/>
+        </endButton>
+
+    </Dialog>
+
+</core:FragmentDefinition>

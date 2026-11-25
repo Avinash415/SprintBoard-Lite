@@ -1,0 +1,272 @@
+<mvc:View
+    controllerName="SprintBoardLite.controller.Overview"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+>
+    <Page
+        showHeader="false"
+        backgroundDesign="Solid"
+        class="overviewPage"
+    >
+        <content>
+            <!-- ========== APP HEADER ========== -->
+            <HBox
+                class="appHeader"
+                justifyContent="SpaceBetween"
+                alignItems="Center"
+            >
+                <HBox alignItems="Center" class="headerLeft">
+                    <Avatar
+                        initials="S"
+                        backgroundColor="Accent6"
+                        displaySize="XS"
+                        class="appLogo"
+                    />
+                    <Title
+                        text="SprintBoard Lite"
+                        level="H5"
+                        class="headerTitle"
+                    />
+                </HBox>
+
+                <HBox alignItems="Center" class="headerRight">
+                    <Button
+                        text="Help"
+                        icon="sap-icon://sys-help"
+                        type="Transparent"
+                        class="headerBtn"
+                    />
+                    <Avatar
+                        initials="AK"
+                        displaySize="XS"
+                        class="userAvatar"
+                    />
+                </HBox>
+            </HBox>
+
+            <!-- ========== HERO SECTION ========== -->
+            <VBox class="heroSection">
+                <Title text="Team Tasks" class="heroTitle"/>
+                <Text
+                    text="Plan, track and finish team tasks efficiently"
+                    class="heroSubtitle"
+                />
+            </VBox>
+
+            <!-- ========== NEW TASK BUTTON ========== -->
+            <HBox justifyContent="End" class="actionBar">
+                <Button
+                    text="{i18n>newTask}"
+                    icon="sap-icon://add"
+                    type="Emphasized"
+                    class="newTaskBtn"
+                    press="onNewTask"
+                />
+            </HBox>
+
+            <!-- ========== STATISTICS CARDS ========== -->
+            <HBox class="statsRow" wrap="Wrap" justifyContent="SpaceBetween">
+                <!-- Open Tasks -->
+                <Panel class="statCard">
+                    <HBox alignItems="Center" class="statCardContent">
+                        <VBox class="statNumberBox info">
+                            <ObjectNumber
+                                number="{stats>/open}"
+                                emphasized="true"
+                                class="statNumber"
+                            />
+                        </VBox>
+                        <VBox class="statTextBox">
+                            <Text text="OPEN TASKS" class="statLabel"/>
+                            <Text text="Current sprint" class="statSub"/>
+                        </VBox>
+                    </HBox>
+                </Panel>
+
+                <!-- Due This Week -->
+                <Panel class="statCard">
+                    <HBox alignItems="Center" class="statCardContent">
+                        <VBox class="statNumberBox warning">
+                            <ObjectNumber
+                                number="{stats>/dueThisWeek}"
+                                emphasized="true"
+                                class="statNumber"
+                            />
+                        </VBox>
+                        <VBox class="statTextBox">
+                            <Text text="DUE THIS WEEK" class="statLabel"/>
+                            <Text text="Current sprint" class="statSub"/>
+                        </VBox>
+                    </HBox>
+                </Panel>
+
+                <!-- Completed -->
+                <Panel class="statCard">
+                    <HBox alignItems="Center" class="statCardContent">
+                        <VBox class="statNumberBox success">
+                            <ObjectNumber
+                                number="{stats>/done}"
+                                emphasized="true"
+                                class="statNumber"
+                            />
+                        </VBox>
+                        <VBox class="statTextBox">
+                            <Text text="COMPLETED" class="statLabel"/>
+                            <Text text="Current sprint" class="statSub"/>
+                        </VBox>
+                    </HBox>
+                </Panel>
+            </HBox>
+
+            <!-- ========== TASKS CONTAINER ========== -->
+            <Panel class="taskContainer">
+                <!-- Header -->
+                <headerToolbar>
+                    <Toolbar class="taskToolbar">
+                        <Title text="All Tasks" level="H5" class="sectionTitle"/>
+                        <ObjectStatus
+                            text="{= ${tasks>/tasks}.length + ' Tasks'}"
+                            class="taskCountBadge"
+                        />
+                        <ToolbarSpacer/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <!-- Filter Bar -->
+                <VBox class="filterSection">
+                    <HBox
+                        class="filterRow"
+                        justifyContent="SpaceBetween"
+                        wrap="Wrap"
+                        alignItems="Center"
+                    >
+                        <SearchField
+                            id="searchField"
+                            width="100%"
+                            placeholder="Search by task title..."
+                            liveChange="onSearch"
+                            class="searchField"
+                        />
+
+                        <HBox class="filterControls" wrap="Wrap" alignItems="Center">
+                            <Select
+                                id="statusFilter"
+                                width="11rem"
+                                change="onFilterChange"
+                                class="filterSelect"
+                            >
+                                <items>
+                                    <core:Item key="" text="Status: All"/>
+                                    <core:Item key="Open" text="Open"/>
+                                    <core:Item key="In Progress" text="In Progress"/>
+                                    <core:Item key="Done" text="Done"/>
+                                </items>
+                            </Select>
+
+                            <Select
+                                id="categoryFilter"
+                                width="11rem"
+                                change="onFilterChange"
+                                class="filterSelect"
+                            >
+                                <items>
+                                    <core:Item key="" text="Category: All"/>
+                                    <core:Item key="Learning" text="Learning"/>
+                                    <core:Item key="Planning" text="Planning"/>
+                                    <core:Item key="Onboarding" text="Onboarding"/>
+                                </items>
+                            </Select>
+
+                            <Button
+                                icon="sap-icon://sort"
+                                tooltip="Sort"
+                                press="onSort"
+                                class="filterBtn"
+                            />
+                            <Button
+                                icon="sap-icon://group-2"
+                                tooltip="Group"
+                                press="onGroup"
+                                class="filterBtn"
+                            />
+                            <Button
+                                icon="sap-icon://refresh"
+                                tooltip="Reset"
+                                press="onReset"
+                                class="filterBtn"
+                            />
+                        </HBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Table -->
+                <Table
+                    id="taskTable"
+                    class="taskTable"
+                    growing="true"
+                    growingScrollToLoad="true"
+                    items="{tasks>/tasks}"
+                    mode="None"
+                >
+                    <columns>
+                        <Column width="28%" minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="TASK"/>
+                        </Column>
+                        <Column width="16%" minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="CATEGORY"/>
+                        </Column>
+                        <Column width="14%" minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="PRIORITY"/>
+                        </Column>
+                        <Column width="16%" minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="STATUS"/>
+                        </Column>
+                        <Column width="14%" minScreenWidth="Tablet" demandPopin="true" hAlign="End">
+                            <Text text="DUE DATE"/>
+                        </Column>
+                    </columns>
+
+                    <items>
+                        <ColumnListItem
+                            type="Navigation"
+                            press="onTaskPress"
+                            class="taskRow"
+                        >
+                            <cells>
+                                <Text text="{tasks>title}" class="taskTitleCell"/>
+                                <Text text="{tasks>category}"/>
+                                <ObjectStatus
+                                    text="{tasks>priority}"
+                                    state="{
+                                        path: 'tasks>priority',
+                                        formatter: '.formatter.priorityState'
+                                    }"
+                                    inverted="true"
+                                    class="priorityPill"
+                                />
+                                <ObjectStatus
+                                    text="{tasks>status}"
+                                    state="{
+                                        path: 'tasks>status',
+                                        formatter: '.formatter.statusState'
+                                    }"
+                                    inverted="true"
+                                    class="statusPill"
+                                />
+                                <Text text="{tasks>dueDate}" class="dueDateCell"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </Panel>
+
+            <!-- Tip -->
+            <HBox class="tipBar" alignItems="Center">
+                <core:Icon src="sap-icon://hint" size="0.9rem" class="tipIcon"/>
+                <Text text="Tip: Select any task row to open the Details page"/>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

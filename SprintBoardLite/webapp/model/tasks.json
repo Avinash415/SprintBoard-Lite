@@ -1,0 +1,124 @@
+{
+  "tasks": [
+    {
+      "id": "T101",
+      "title": "Draft Kickoff Checklist",
+      "category": "Onboarding",
+      "priority": "High",
+      "status": "Open",
+      "dueDate": "2026-11-18",
+      "description": "Prepare project kickoff agenda and checklist.",
+      "favorite": false
+    },
+    {
+      "id": "T102",
+      "title": "Complete SAPUI5 Walkthrough",
+      "category": "Learning",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "2026-11-20",
+      "description": "Finish all SAPUI5 walkthrough tutorials.",
+      "favorite": true
+    },
+    {
+      "id": "T103",
+      "title": "Create Sprint Plan",
+      "category": "Planning",
+      "priority": "Medium",
+      "status": "Open",
+      "dueDate": "2026-11-22",
+      "description": "Define sprint goals and deliverables.",
+      "favorite": false
+    },
+    {
+      "id": "T104",
+      "title": "Environment Setup",
+      "category": "Onboarding",
+      "priority": "High",
+      "status": "Done",
+      "dueDate": "2026-11-15",
+      "description": "Install BAS, UI5 CLI, and required extensions.",
+      "favorite": true
+    },
+    {
+      "id": "T105",
+      "title": "Learn JSONModel",
+      "category": "Learning",
+      "priority": "Medium",
+      "status": "In Progress",
+      "dueDate": "2026-11-24",
+      "description": "Practice data binding with JSONModel.",
+      "favorite": false
+    },
+    {
+      "id": "T106",
+      "title": "Team Introduction Session",
+      "category": "Onboarding",
+      "priority": "Low",
+      "status": "Done",
+      "dueDate": "2026-11-10",
+      "description": "Meet project stakeholders and team members.",
+      "favorite": false
+    },
+    {
+      "id": "T107",
+      "title": "Review UI Design",
+      "category": "Planning",
+      "priority": "Medium",
+      "status": "Open",
+      "dueDate": "2026-11-25",
+      "description": "Finalize overview and detail page layouts.",
+      "favorite": true
+    },
+    {
+      "id": "T108",
+      "title": "Master Routing",
+      "category": "Learning",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "2026-11-27",
+      "description": "Implement navigation between views.",
+      "favorite": false
+    },
+    {
+      "id": "T109",
+      "title": "Estimate Project Tasks",
+      "category": "Planning",
+      "priority": "Low",
+      "status": "Done",
+      "dueDate": "2026-11-12",
+      "description": "Assign effort estimates for all tasks.",
+      "favorite": false
+    },
+    {
+      "id": "T110",
+      "title": "Understand Fragments",
+      "category": "Learning",
+      "priority": "Medium",
+      "status": "Open",
+      "dueDate": "2026-11-29",
+      "description": "Build reusable dialog fragments.",
+      "favorite": true
+    },
+    {
+      "id": "T111",
+      "title": "Prepare User Stories",
+      "category": "Planning",
+      "priority": "High",
+      "status": "In Progress",
+      "dueDate": "2026-11-30",
+      "description": "Document requirements and acceptance criteria.",
+      "favorite": false
+    },
+    {
+      "id": "T112",
+      "title": "Account Access Verification",
+      "category": "Onboarding",
+      "priority": "Low",
+      "status": "Open",
+      "dueDate": "2026-12-01",
+      "description": "Verify access to development tools and repositories.",
+      "favorite": false
+    }
+  ]
+}
